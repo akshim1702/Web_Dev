@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Grid + Media queries</title>
+    <Style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside' 'footer footer footer footer';
+        }
+        
+        body {
+            background-color: blue;
+        }
+        
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: rgb(27, 182, 48);
+            }
+            .container {
+                grid-template-areas: 'navbar navbar navbar navbar' 'section section section section' 'footer footer footer footer';
+            }
+            aside {
+                display: none;
+            }
+        }
+        
+        @media only screen and (max-width:500px) and (min-width:300px) {
+            body {
+                background-color: rgb(207, 22, 22);
+            }
+            .container {
+                grid-template-areas: 'navbar navbar navbar navbar' 'section section section section' 'aside aside aside aside' 'footer footer footer footer';
+            }
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (max-width:800px) and (min-width:500px) {
+            body {
+                background-color: rgb(148, 146, 11);
+            }
+        }
+        
+        @media only screen and (min-width:800px) {
+            body {
+                background-color: rgb(22, 201, 207);
+            }
+        }
+        
+        .border-now {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: wheat;
+        }
+        
+        nav {
+            grid-area: navbar;
+        }
+        
+        section {
+            grid-area: section;
+        }
+        
+        aside {
+            grid-area: aside;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="border-now">
+            <span>
+                Home
+            </span>
+            <span>
+                about us
+            </span>
+            <span>
+                Contact Us
+            </span>
+            <span>
+                Services
+            </span>
+        </nav>
+        <section class="border-now">
+            <h2>
+                learn bla bla bla
+            </h2>
+        </section>
+        <aside class="border-now">
+            <h1>more about us</h1>
+        </aside>
+    </div>
+    <footer class="border-now">
+        copyejwdn
+    </footer>
+</body>
+
+</html>

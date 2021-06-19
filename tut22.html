@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility And Z-index</title>
+    <Style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box1{
+            background-color: green;
+           /* visibility: hidden;  */
+           /* element hidden but space occupied */
+           position: relative;
+           top: 44px;
+           z-index: 35;
+        }
+        #box2{
+            background-color: rgb(204, 128, 15);
+            /* display: none; */
+            /* Element and space both hidden and unoccupied */
+            position: relative;
+           top: 14px;
+           z-index: 54;
+           /* jiski z-index badi wo hi dikhega */
+        }
+        #box3{
+            background-color: rgb(34, 0, 128);
+        }
+        #box4{
+            background-color: rgb(201, 14, 14);
+        }
+    </Style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

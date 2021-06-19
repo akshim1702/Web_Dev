@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before And after Pseudo selectors</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        .navigation{
+            display: flex;
+            font-size: 20px;
+            
+        }
+        li{
+            list-style: none;
+            padding: 20px 23px;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            margin: 3px 22px;
+            align-items: center;
+            justify-content: center;
+        }
+        section::before{
+            content: "This is before content";
+        }
+        section::after{
+            content: "This is after content";
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">home</li>
+                <li class="item">about</li>
+                <li class="item">contact us</li>
+                <li class="item">services</li>
+            </ul>
+        </nav>
+        <section>
+            <h3>
+                welcome bro
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ea earum voluptate iure magni nulla, recusandae et! Nesciunt, dolorem omnis.
+            </p>
+        </section>
+        <hr>
+    </header>
+</body>
+</html>
